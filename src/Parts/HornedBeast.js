@@ -25,8 +25,7 @@ class HornedBeast extends React.Component {
         return (
             <div>
                 <h2>{this.props.title}</h2>
-                <img className="image" src={this.props.imageUrl} alt={this.props.title} title={this.props.title} />
-
+                <img className="image" src={this.props.imageUrl} alt={this.props.title} title={this.props.title} onClick={this.props.onClick} />
                 {/* The heart icon with the number of favorites next to it */}
                 <div>
                     <span role="img" aria-label="heart" onClick={this.handleClick}>❤️</span>
