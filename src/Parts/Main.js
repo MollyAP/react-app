@@ -5,6 +5,10 @@ import { Container, Row, Col } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 class Main extends React.Component {
+  handleBeastClick = (beast) => {
+    this.props.onSelectBeast(beast);
+  };
+
   render() {
     return (
       <Container>
@@ -16,7 +20,9 @@ class Main extends React.Component {
                 title={beast.title}
                 imageUrl={beast.image_url}
                 description={beast.description}
+                onClick={() => this.handleBeastClick(beast)}
               />
+
             </Col>
           ))}
         </Row>
